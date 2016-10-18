@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/value"
+        android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/backgroud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        >
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:background="#508a8a8a"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/setting_line"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:background="#508a8a8a"
+            />
+
+
+    </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/setting_btn"
+            android:progressDrawable="@android:color/transparent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:max="3"
+            android:layout_gravity="center_vertical"
+            />
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
