@@ -42,7 +42,8 @@ public class SettingSeekBar extends LinearLayout {
         mSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
+                settingSeekBarLisenter.onChangeValue(seekBar.getProgress());
+                textValue.setTranslationX(getTextViewPosition());
             }
 
             @Override
@@ -52,8 +53,7 @@ public class SettingSeekBar extends LinearLayout {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                settingSeekBarLisenter.onChangeValue(seekBar.getProgress());
-                textValue.setTranslationX(getTextViewPosition());
+
             }
         });
     }
